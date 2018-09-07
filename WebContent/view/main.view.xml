@@ -1,0 +1,51 @@
+<mvc:View 
+xmlns:core="sap.ui.core" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+controllerName="z7.controller.main"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+			<Page showNavButton="true" 
+				navButtonPress="onNavBack"
+				title="Welcome to Detail Information" >
+				<content>
+					<Button text="{i18n>SignIn}" id="idSignIn" press="handSignIn"></Button>
+				</content>
+				
+				<Panel width="auto" class="sapUiResponsiveMargin">
+				<content>
+				<Table id="table" showNoData="true" showUnread="true" mode=""
+						growing="false" updateFinished="onTableUpdateFinished">
+						
+						<headerToolbar> <!-- 新增下载模板按钮 -->
+							<Toolbar height="3rem">
+								<Text text="" class="sapMH4Style" />
+								<ToolbarSpacer />
+								<Button id="btnQuery" press="onQuery" icon="sap-icon://accept"
+									iconFirst="false" text="查询记录" />
+							</Toolbar>
+						</headerToolbar>
+						
+						
+						<columns>
+						
+						<Column>
+						<Text text="签到时间" tooltip="{i18n>title}" />
+						</Column>
+						<Column>
+						<Text text="签到地点" tooltip="{i18n>title}" />
+						</Column>
+						<Column>
+						<Text text="项目名称" tooltip="{i18n>title}" />
+						</Column>
+						
+						
+						</columns>
+				</Table>
+				
+				</content>
+				</Panel>
+				
+
+				
+			</Page>
+</mvc:View>

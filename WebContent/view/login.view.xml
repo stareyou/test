@@ -1,0 +1,67 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:form="sap.ui.layout.form" 
+xmlns:smartField="sap.ui.comp.smartfield" 
+xmlns:l="sap.ui.layout"
+controllerName="z7.controller.login" 
+displayBlock="true"
+>
+	<App id="app" backgroundColor="">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="__layout1">
+						<sap.ui.layout:content>
+						<!--	
+							<Button xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="签到" width="100px" id="submit" press="presssubmit"/>
+								
+-->
+							
+							
+						</sap.ui.layout:content>
+					</sap.ui.layout:VerticalLayout>
+					<Panel headerText="SmartField" expandable="false">
+						<l:VerticalLayout
+							class="sapUiContentPadding"
+							width="100%">
+							<l:content>
+								<HBox>
+									<Image xmlns="sap.m" width="70px" height="30px" id="VerifyCode" alt="right" densityAware="false">
+										<layoutData>
+											<FlexItemData growFactor="1" />
+										</layoutData>
+									</Image>
+								</HBox>
+							</l:content>
+						</l:VerticalLayout>
+							<form:SimpleForm minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+								<form:content>
+									
+									<Label text="{i18n>answer}" labelFor="idAnswer"/>
+									<Input value="" id="idAnswer"/>
+									
+									<Label text="{i18n>UserName}" labelFor="idUserName"/>
+									<Input value="O1000009" id="idUserName" editable="true"/>
+									
+									<Label text="{i18n>Pwd}" labelFor="idPwd"/>
+									<Input value="" id="idPwd" type="Password" placeholder="Enter password ..."/>
+						
+									<sap.ui.layout:VerticalLayout width="100%" xmlns:sap.ui.layout="sap.ui.layout" id="__layout0">
+						
+									    <sap.ui.layout:content>
+						
+									        <Button xmlns="sap.m" text="{i18n>Login}" width="100%" id="idLogin" press="handLogin"/>
+						
+									    </sap.ui.layout:content>
+						
+									</sap.ui.layout:VerticalLayout>
+								
+								</form:content>
+							</form:SimpleForm>
+					</Panel>		
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
