@@ -16,7 +16,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
 			},
 		getVerifyCode: function(){
 			//https://cors-anywhere.herokuapp.com/
-			var url = "proxy/http/202.98.157.41:2015/7lego.Mobile.WebAPI/Account/VerifyCode";
+			var url = "http:/202.98.157.41:2015/7lego.Mobile.WebAPI/Account/VerifyCode";
 			jQuery.ajax({
 				url: url,
 				async: false,
